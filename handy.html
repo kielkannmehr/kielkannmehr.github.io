@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<title>KKM Templates</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1 {font-family: "Courier New", sans-serif}
+body, html {height: 100%}
+.bgimg {
+  background-image: url('img/Muster_aus_Symbolen.png');
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+	.mob-title {
+    position: absolute;
+    top: 35%;
+    left: 0%;
+    width: 100%;
+		text-align: center;
+    margin: 0 0 0 0;
+		padding-top: 5%;
+		padding-bottom: 5%;
+	}
+	.mobsidebar {
+		position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+		height: 100%;
+		text-align: left;
+    margin: 0 0 0 0;
+	}
+	.mobmenu {
+		position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+		height: 100%;
+		text-align: left;
+    margin: 0 0 0 0;
+	}
+	div.rotated{
+		-webkit-transform:rotate(90deg);
+		-moz-transform:rotate(90deg);
+		-o-transform:rotate(90deg);
+		-ms-transform:rotate(90deg);
+		transform:rotate(90deg);
+	}
+	.mobilerow {
+		padding-left: 3%;
+		padding-top: 5%;
+	}
+	.pb {
+		margin-bottom: 5%;
+		display: block;
+	}
+</style>
+<body>
+	
+<!-- MAIN VIEW -->
+<div class="bgimg w3-display-container w3-animate-opacity" id="1705839034" data-uialign="center">
+	<div class="w3-padding w3-left w3-white w3-xlarge" onclick="w3_open()">☰</div>
+	
+	<!-- SIDEBAR -->
+	<div class="w3-white mobsidebar" id="mobilesidebar" style="display: none;">
+		<div class="w3-padding w3-left w3-white w3-xlarge rotated pb" onclick="w3_close()">☰</div>
+			<div class="w3-row mobilerow">
+			 <a href="#Konzept" onclick="sidebar_to_menu('konzept')" class="w3-bar-item w3-padding" style="text-decoration: none;">
+				<img src="https://le-cdn.website-editor.net/6ceb4919ad7340f9bfcd8a41b9113bc8/dms3rep/multi/opt/Symbol_15-1920w.png" width="30px" no_space_b="true" no_space_e="true"/>
+				&nbsp; KONZEPT
+			 </a>
+			</div>
+			<div class="w3-row mobilerow">
+			 <a href="#Impressum" onclick="sidebar_to_menu('aktuelles')" class="w3-bar-item w3-padding" style="text-decoration: none;">
+				<img src="https://le-cdn.website-editor.net/6ceb4919ad7340f9bfcd8a41b9113bc8/dms3rep/multi/opt/Symbol_3-1920w.png" width="30px" no_space_b="true" no_space_e="true"/>
+				&nbsp; AKTUELLES
+			 </a>
+			</div>
+			<div class="w3-row mobilerow">
+			 <a href="#Personen" onclick="sidebar_to_menu('personen')" class="w3-bar-item w3-padding" style="text-decoration: none;">
+				<img src="https://le-cdn.website-editor.net/6ceb4919ad7340f9bfcd8a41b9113bc8/dms3rep/multi/opt/Symbol_0-1920w.png" width="30px" no_space_b="true" no_space_e="true"/>
+				&nbsp; &Uuml;BER UNS
+			 </a>
+			</div>
+			<div class="w3-row mobilerow">
+			 <a href="#Unter" onclick="sidebar_to_menu('unter')" class="w3-bar-item w3-padding" style="text-decoration: none;">
+				<img src="https://le-cdn.website-editor.net/6ceb4919ad7340f9bfcd8a41b9113bc8/dms3rep/multi/opt/Symbol_17-1920w.png" width="30px" no_space_b="true" no_space_e="true"/>
+				&nbsp; UNTERST&Uuml;TZER*INNEN
+			 </a>
+			</div>
+	</div>
+	
+	<!-- MENU WITH THE TEXT -->
+	<div class="w3-white mobmenu" id="mobilemenu" style="display: none;">
+		<div class="w3-padding w3-left w3-white w3-xlarge rotated" onclick="menu_to_sidebar()">☰</div><br>
+		<div class="w3-col s1 w3-padding">
+	 	</div>
+	 <div class="w3-col s9">
+		<a href="#Konzept" onclick="change_cat_menu('konzept')" style="text-decoration: none; padding:3px">
+		 <img src="https://le-cdn.website-editor.net/6ceb4919ad7340f9bfcd8a41b9113bc8/dms3rep/multi/opt/Symbol_15-1920w.png" width="30px"/>
+		 <p class="menucat font-size-NaN m-font-size-NaN" style=";display: none; text-decoration: none;" id="konzeptcat">
+			&nbsp; KONZEPT
+		 </p>
+		</a>
+		 <a href="#Aktuelles" onclick="change_cat_menu('aktuelles')" style="text-decoration: none; padding:3px">
+		 <img src="https://le-cdn.website-editor.net/6ceb4919ad7340f9bfcd8a41b9113bc8/dms3rep/multi/opt/Symbol_3-1920w.png" width="30px"/>
+		 <p class="menucat font-size-NaN m-font-size-NaN" style=";display: none; text-decoration: none;" id="aktuellescat">
+			&nbsp; AKTUELLES
+		 </p>
+		</a>
+		<a href="#Personen" onclick="change_cat_menu('personen')" style="text-decoration: none; padding:3px">
+		 <img src="https://le-cdn.website-editor.net/6ceb4919ad7340f9bfcd8a41b9113bc8/dms3rep/multi/opt/Symbol_0-1920w.png" width="30px"/>
+		 <p class="menucat font-size-NaN m-font-size-NaN" style="display: none; text-decoration: none;" id="personencat">
+			&nbsp; &Uuml;BER UNS
+		 </p>
+		</a>
+		<a href="#Unter" onclick="change_cat_menu('unter')" style="text-decoration: none; padding:3px">
+		 <img src="https://le-cdn.website-editor.net/6ceb4919ad7340f9bfcd8a41b9113bc8/dms3rep/multi/opt/Symbol_17-1920w.png" width="30px"/>
+		 <p class="menucat" style=";display: none; text-decoration: none;" id="untercat">
+			&nbsp; UNTERST&uuml;TZER*INNEN
+		 </p>
+		</a>
+	 </div>
+			<!--  KONZEPT -->
+		<div class="menutext" style="display:none;" id="konzepttext">
+		 <div class="w3-row">
+			<div class="w3-col s2">
+			 &nbsp;
+			</div>
+			<div class="w3-col s7">
+			 <p class="w3-large">
+				<b>Konzept</b>
+			 </p>
+	Alle reden von Nachhaltigkeit. Medien berichten davon und junge Menschen gehen dafür auf die Straße. Unternehmen suchen Innovationen und Politiker*innen beziehen Stellung. Es gibt viele Initiativen, die mit an einer sozialen, ökologischen und wirtschaftlich nachhaltigen Welt arbeiten.
+	All das passiert auch in Kiel. Aber was genau? Wer macht das? Und wo ist Potenzial für mehr? Um die Auseinandersetzung mit einer nachhaltigen Zukunft in Kiel konstruktiv voranzubringen, findet das Kiel Kann Mehr Zukunftsfestival statt – mit einem für Kiel und darüber hinaus neuen Veranstaltungskonzept. Wir bringen einen Tag lang Bürger*innen mit Expert*innen und Entscheidungsträger*innen aus Politik, Wirtschaft und Forschung zusammen, um Impulse für eine ökologisch, sozial und wirtschaftlich nachhaltige Zukunft unserer Stadt zu setzen.
+	Mitgestalten, Stellung beziehen, sichtbar machen. Kiel Kann Mehr!
+			</div>
+			 <div class="w3-col s2">
+			 <img src="logos/Logo.png" width="100%">
+			</div>
+		 </div>
+		</div>
+			<!--  AKTUELLES -->
+		<div class="menutext" style=";display:none;" id="aktuellestext">
+		 <div class="w3-row">
+			<div class="w3-col s2">
+			 &nbsp;
+			</div>
+			<div class="w3-col s8">
+			 <p class="w3-large">
+				<b>Aktuelles</b>
+			 </p>
+				An dieser Stelle veröffentlichen wir Neuigkeiten rund um das Kiel Kann Mehr Zukunftsfestival!
+			</div>
+		 </div>
+		</div>
+		<!--  PERSONEN -->
+		<div class="menutext" style="display: none;" id="personentext">
+		 <div class="w3-row">
+			<div class="w3-col s2">
+			 &nbsp;
+			</div>
+			<div class="w3-col s8">
+			 <p class="w3-large">
+				<b>Über uns</b>
+			 </p>
+				Das Kiel Kann Mehr Zukunftsfestival wird organisiert von Studierenden der School of Sustainability an der Christian-Albrechts-Universität zu Kiel.<br>
+				Im Foto von links oben nach rechts unten: Hauke Dentzin, Mareike Chalkley, Sabrina Grape, Lisa Vagts, Maura Rafelt, Jonas Mayer
+				<br>&nbsp;<br>
+				<img src="img/kkmbild.jpg" width=100%>
+				<br>&nbsp;<br>
+				Sie erreichen das Team per E-Mail an <a href="mailto:info@kielkannmehr.de">info@kielkannmehr.de</a> oder über die <a href="https://www.facebook.com/KielKannMehr/">Facebookseite.</a>
+				<br>
+				&nbsp;
+				<br>
+				<br>
+				&nbsp;
+				<br>
+				<br>
+				&nbsp;
+				<br>
+			</div>
+		 </div>
+		</div>
+		<!--  SPONSOR -->
+		<div class="menutext" style=";display:none;" id="untertext">
+		 <div class="w3-row">
+			<div class="w3-col s2">
+			 &nbsp;
+			</div>
+			<div class="w3-col s8">
+				<p class="w3-large">
+				<b>Unterst&uuml;tzer*innen</b>
+				</p>
+				Das Kiel Kann Mehr Zukunftsfestival wird von diversen Organisationen, Unternehmen und Behörden unterstützt. Das passiert durch finanzielle Förderung, Hilfe in der Veranstaltungsplanung, die Bereitstellung von Standorten und durch Programmpunkte. Vielen Dank dafür!
+				<br>
+				&nbsp;
+				<br>
+				<div class="w3-row">
+					<div class="w3-col s6 w3-padding"><img src="logos/Anscharcampus_Logo.png" width="100%"></div>
+					<div class="w3-col s6 w3-padding"><img src="logos/BEI-SH_Logo.png" width="100%"></div>
+				</div>
+				<div class="w3-row">
+					<div class="w3-col s6 w3-padding"><img src="logos/CAU_Logo.png" width="100%"></div>
+					<div class="w3-col s6 w3-padding"><img src="logos/FH-Kiel_Logo.png" width="100%"></div>
+				</div>
+				<div class="w3-row">
+					<div class="w3-col s6 w3-padding"><img src="logos/Geomar_Logo.png" width="100%"></div>
+					<div class="w3-col s6 w3-padding"><img src="logos/HBS-SH_Logo.png" width="100%"></div>
+				</div>
+				<div class="w3-row">
+					<div class="w3-col s6 w3-padding"><img src="logos/KielRegion_logo.png" width="100%"></div>
+					<div class="w3-col s6 w3-padding"><img src="logos/KlimaschutzStadt_Logo.png" width="100%"></div>
+				</div>
+				<div class="w3-row">
+					<div class="w3-col s6 w3-padding"><img src="logos/StadtKiel_Logo.png" width="100%"></div>
+					<div class="w3-col s6 w3-padding"><img src="logos/Stadtnatur_Logo.png" width="100%"></div>
+				</div>
+				<br>
+				&nbsp;
+				<br>
+				<br>
+			</div>
+		 </div>
+		</div>
+	</div>
+
+	<!-- TITLE -->
+	<div class="w3-text w3-white w3-xxlarge w3-center w3-cell-middle mob-title" id="mobiletitle">
+		KIEL KANN MEHR<br>
+	  ZUKUNFTSFESTIVAL
+	</div>
+	<!-- Footer -->
+	<div class="footer w3-row w3-white w3-bottom w3-padding">
+		<a href="impressum.html">Impressum</a> © 2020 / Initiative Kiel Kann Mehr <span style="float: right; padding: 0px;" > powered by <a href=""><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" height=30px></a> und <a href=""><img src="https://spielinkiel.github.io/img/fn_logo.png" height=30px></a></span>
+	</div>
+</div>
+
+<script id="1939224650">
+// Script to open and close sidebar
+	function w3_open() {
+		document.getElementById("mobilesidebar").style.display = "inline";
+		document.getElementById("mobiletitle").style.display = "none";
+		show_mobile_rows();
+	}
+	function w3_close() {
+		document.getElementById("mobilesidebar").style.display = "none";
+		document.getElementById("mobiletitle").style.display = "inline";
+	}
+	function sidebar_to_menu(category) {
+		document.getElementById("mobilesidebar").style.display = "none";
+		document.getElementById("mobiletitle").style.display = "none";
+		document.getElementById("mobilemenu").style.display = "inline";
+		hide_mobile_rows();
+		hide_menu_cats();
+		hide_menu_texts();
+		show_text(category);
+	}
+	function hide_mobile_rows() {
+		var mobile_rows = document.getElementsByClassName("mobilerow")
+		for (i = 0; i < mobile_rows.length; i++) {
+			mobile_rows[i].style.display = "none";
+		} 
+	}
+	function show_mobile_rows() {
+		var mobile_rows = document.getElementsByClassName("mobilerow")
+		for (i = 0; i < mobile_rows.length; i++) {
+			mobile_rows[i].style.display = "inline";
+		} 
+	}
+	function change_cat_menu(category) {
+			hide_menu_cats();
+			hide_menu_texts();
+			show_text(category);
+	}
+	function show_text(category) {
+			var category_name = category.concat("cat");
+			document.getElementById(category_name).style.display = "inline";
+			var category_text = category.concat("text");
+			document.getElementById(category_text).style.display = "inline";
+	}
+	function hide_menu_cats() {
+			var menu_cats = document.getElementsByClassName("menucat")
+		for (i = 0; i < menu_cats.length; i++) {
+			menu_cats[i].style.display = "none";
+		} 
+	}
+	function hide_menu_texts() {
+			var menu_texts = document.getElementsByClassName("menutext")
+	for (i = 0; i < menu_texts.length; i++) {
+		menu_texts[i].style.display = "none";
+	} 
+	}
+	function menu_to_sidebar() {
+		document.getElementById("mobilesidebar").style.display = "block";
+		document.getElementById("mobiletitle").style.display = "none";
+		document.getElementById("mobilemenu").style.display = "none";
+		show_mobile_rows();
+	}
+	w3_close()
+</script>
+
+</body>
+</html>
